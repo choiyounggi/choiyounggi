@@ -1,0 +1,98 @@
+name: Update README cards
+
+# 카드 SVG 를 저장소 안에 파일로 생성해 커밋한다.
+# 런타임 서비스에 의존하지 않으므로 공용 인스턴스가 내려가도 프로필이 깨지지 않는다.
+#   (github-readme-stats.vercel.app 은 DEPLOYMENT_PAUSED,
+#    github-profile-trophy.vercel.app 은 402 DEPLOYMENT_DISABLED 상태였음)
+#
+# light / dark 를 각각 생성해 README 의 <picture> 에서 골라 쓴다.
+# 공개 통계만 쓰므로 PAT 불필요 — GITHUB_TOKEN 으로 충분하다.
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # 매일 12:17 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-cards
+  cancel-in-progress: false
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # stats — ★ 는 아직 0 이라 숨긴다. 첫 스타가 붙으면 hide 에서 stars 를 빼면 된다.
+      - name: stats (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: username=choiyounggi&show_icons=true&include_all_commits=true&hide=stars,issues&hide_border=true&hide_title=true&rank_icon=github&theme=github_dark
+
+      - name: stats (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: username=choiyounggi&show_icons=true&include_all_commits=true&hide=stars,issues&hide_border=true&hide_title=true&rank_icon=github&theme=default
+
+      - name: top-langs (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          path: profile/langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: username=choiyounggi&layout=compact&langs_count=6&hide_border=true&hide_title=true&theme=github_dark
+
+      - name: top-langs (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          path: profile/langs-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: username=choiyounggi&layout=compact&langs_count=6&hide_border=true&hide_title=true&theme=default
+
+      # 생성 결과를 실제로 검증한다 — 액션이 성공을 보고해도 파일이 없거나
+      # 에러 카드("Something went wrong")면 커밋하지 않는다.
+      - name: verify cards
+        run: |
+          set -euo pipefail
+          fail=0
+          for f in profile/stats-dark.svg profile/stats-light.svg \
+                   profile/langs-dark.svg profile/langs-light.svg; do
+            if [ ! -s "$f" ]; then
+              echo "::error::$f 가 없거나 비어 있다"; fail=1; continue
+            fi
+            if ! head -c 400 "$f" | grep -qi '<svg'; then
+              echo "::error::$f 가 SVG 가 아니다"; fail=1; continue
+            fi
+            if grep -qi 'Something went wrong' "$f"; then
+              echo "::error::$f 가 에러 카드다"; fail=1; continue
+            fi
+            echo "ok: $f ($(wc -c < "$f") bytes)"
+          done
+          exit $fail
+
+      - name: commit
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          git commit -m "chore: refresh README cards"
+          git push
