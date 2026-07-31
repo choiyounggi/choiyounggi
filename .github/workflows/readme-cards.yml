@@ -34,7 +34,7 @@ jobs:
           path: profile/stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: "true"
-          options: username=choiyounggi&show_icons=true&include_all_commits=true&hide=stars,issues&hide_border=true&hide_title=true&rank_icon=github&theme=github_dark
+          options: username=choiyounggi&show_icons=true&include_all_commits=true&hide=stars,issues&hide_border=true&hide_title=true&hide_rank=true&theme=github_dark
 
       - name: stats (light)
         uses: stats-organization/github-readme-stats-action@v2
@@ -43,7 +43,7 @@ jobs:
           path: profile/stats-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: "true"
-          options: username=choiyounggi&show_icons=true&include_all_commits=true&hide=stars,issues&hide_border=true&hide_title=true&rank_icon=github&theme=default
+          options: username=choiyounggi&show_icons=true&include_all_commits=true&hide=stars,issues&hide_border=true&hide_title=true&hide_rank=true&theme=default
 
       - name: top-langs (dark)
         uses: stats-organization/github-readme-stats-action@v2
