@@ -63,6 +63,27 @@ jobs:
           fail_on_error: "true"
           options: username=choiyounggi&layout=compact&langs_count=6&hide_border=true&hide_title=true&theme=default
 
+      # trophy 는 별개 프로젝트(ryo-ma/github-profile-trophy)의 공식 액션이다.
+      # 유일한 태그 v1.0(2026-01-27)에는 theme 입력이 없어(2026-03-03 추가) 커밋 SHA 로 핀했다.
+      # 주의: 이 액션은 username/output_path/token/theme 만 받는다. 호스팅 서비스의
+      # title= / column= / no-frame= 필터는 render_svg.ts 에 하드코딩돼 있어 쓸 수 없으므로
+      # Stars(0)·Reviews(0) 같은 약한 항목도 함께 렌더된다.
+      - name: trophy (dark)
+        uses: ryo-ma/github-profile-trophy@e3c89df995e92e67cdd4b2acaab9d974583dc1f7
+        with:
+          username: choiyounggi
+          output_path: profile/trophy-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          theme: darkhub
+
+      - name: trophy (light)
+        uses: ryo-ma/github-profile-trophy@e3c89df995e92e67cdd4b2acaab9d974583dc1f7
+        with:
+          username: choiyounggi
+          output_path: profile/trophy-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          theme: default
+
       # 생성 결과를 실제로 검증한다 — 액션이 성공을 보고해도 파일이 없거나
       # 에러 카드("Something went wrong")면 커밋하지 않는다.
       - name: verify cards
@@ -70,7 +91,8 @@ jobs:
           set -euo pipefail
           fail=0
           for f in profile/stats-dark.svg profile/stats-light.svg \
-                   profile/langs-dark.svg profile/langs-light.svg; do
+                   profile/langs-dark.svg profile/langs-light.svg \
+                   profile/trophy-dark.svg profile/trophy-light.svg; do
             if [ ! -s "$f" ]; then
               echo "::error::$f 가 없거나 비어 있다"; fail=1; continue
             fi
