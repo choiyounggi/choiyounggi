@@ -1,3 +1,11 @@
+<p align="center">
+  <img alt="Younggi Choi — I build the harness AI codes inside" src="./profile/banner.png" width="100%">
+</p>
+
+<p align="center">
+  <strong>English</strong> &nbsp;|&nbsp; <a href="./README.ko.md">한국어</a>
+</p>
+
 <h1 align="center">Younggi Choi</h1>
 
 <p align="center">

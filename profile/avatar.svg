@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Harness emblem — a guardrail lattice around a bright verification core">
+<defs>
+  <radialGradient id="abg" cx="0.5" cy="0.5" r="0.62">
+    <stop offset="0" stop-color="#121A24"/><stop offset="0.62" stop-color="#0D1117"/><stop offset="1" stop-color="#080B0F"/>
+  </radialGradient>
+  <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#8FE9F7"/><stop offset="0.5" stop-color="#22B8CF"/><stop offset="1" stop-color="#0B7285"/>
+  </radialGradient>
+  <radialGradient id="cglow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#22B8CF" stop-opacity="0.5"/><stop offset="1" stop-color="#22B8CF" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="ag" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="800" height="800" fill="url(#abg)"/>
+<circle cx="400" cy="400" r="230" fill="url(#cglow)"/>
+<path d="M400,150L616.51,275L616.51,525L400,650L183.49,525L183.49,275Z" fill="none" stroke="#2A3140" stroke-width="2.5"/>
+<path d="M400,162L606.11,281L606.11,519L400,638L193.89,519L193.89,281Z" fill="none" stroke="#2A3140" stroke-width="1.2" opacity="0.6"/>
+<path d="M400,230L547.22,315L547.22,485L400,570L252.78,485L252.78,315Z" fill="none" stroke="#22B8CF" stroke-width="2" opacity="0.55"/>
+<g stroke="#2A3140" stroke-width="1.3" opacity="0.7">
+  <line x1="400" y1="150" x2="400" y2="230"/>
+  <line x1="616.51" y1="275" x2="547.22" y2="315"/>
+  <line x1="616.51" y1="525" x2="547.22" y2="485"/>
+  <line x1="400" y1="650" x2="400" y2="570"/>
+  <line x1="183.49" y1="525" x2="252.78" y2="485"/>
+  <line x1="183.49" y1="275" x2="252.78" y2="315"/>
+</g>
+<path d="M400,304L483.14,352L483.14,448L400,496L316.86,448L316.86,352Z" fill="none" stroke="#22B8CF" stroke-width="1.6" opacity="0.8"/>
+<line x1="400" y1="230" x2="400" y2="304" stroke="#0B7285" stroke-width="1.4" opacity="0.7"/>
+<line x1="547.22" y1="315" x2="483.14" y2="352" stroke="#0B7285" stroke-width="1.4" opacity="0.7"/>
+<line x1="547.22" y1="485" x2="483.14" y2="448" stroke="#0B7285" stroke-width="1.4" opacity="0.7"/>
+<line x1="400" y1="570" x2="400" y2="496" stroke="#0B7285" stroke-width="1.4" opacity="0.7"/>
+<line x1="252.78" y1="485" x2="316.86" y2="448" stroke="#0B7285" stroke-width="1.4" opacity="0.7"/>
+<line x1="252.78" y1="315" x2="316.86" y2="352" stroke="#0B7285" stroke-width="1.4" opacity="0.7"/>
+<circle cx="400" cy="150" r="5" fill="#3A4658"/>
+<circle cx="616.51" cy="275" r="5" fill="#3A4658"/>
+<circle cx="616.51" cy="525" r="5" fill="#3A4658"/>
+<circle cx="400" cy="650" r="5" fill="#3A4658"/>
+<circle cx="183.49" cy="525" r="5" fill="#3A4658"/>
+<circle cx="183.49" cy="275" r="5" fill="#3A4658"/>
+<circle cx="400" cy="230" r="6" fill="#22B8CF" opacity="0.85"/>
+<circle cx="547.22" cy="315" r="6" fill="#22B8CF" opacity="0.85"/>
+<circle cx="547.22" cy="485" r="6" fill="#22B8CF" opacity="0.85"/>
+<circle cx="400" cy="570" r="6" fill="#22B8CF" opacity="0.85"/>
+<circle cx="252.78" cy="485" r="6" fill="#22B8CF" opacity="0.85"/>
+<circle cx="252.78" cy="315" r="6" fill="#22B8CF" opacity="0.85"/>
+<circle cx="400" cy="304" r="4" fill="#8FE9F7"/>
+<circle cx="483.14" cy="352" r="4" fill="#8FE9F7"/>
+<circle cx="483.14" cy="448" r="4" fill="#8FE9F7"/>
+<circle cx="400" cy="496" r="4" fill="#8FE9F7"/>
+<circle cx="316.86" cy="448" r="4" fill="#8FE9F7"/>
+<circle cx="316.86" cy="352" r="4" fill="#8FE9F7"/>
+<circle cx="400" cy="400" r="34" fill="url(#core)" filter="url(#ag)"/>
+<circle cx="400" cy="400" r="50" fill="none" stroke="#22B8CF" stroke-width="1.4" opacity="0.5"/>
+</svg>
