@@ -52,7 +52,7 @@
   
           <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">MultiLanguage</text>
           <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">Rainbow Lang User</text>
-          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">11pt</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">10pt</text>
           
     <style>
     @keyframes MultiLanguageRankAnimation {
@@ -251,7 +251,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   
           <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">PullRequest</text>
           <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">Ultra Puller</text>
-          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">108pt</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">117pt</text>
           
     <style>
     @keyframes PullRequestRankAnimation {
@@ -259,7 +259,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         width: 0px;
       }
       to {
-        width: 6.4px;
+        width: 13.600000000000001px;
       }
     }
     #PullRequest-rank-progress{
@@ -361,7 +361,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   
           <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">Commits</text>
           <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">Hyper Committer</text>
-          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">321pt</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">328pt</text>
           
     <style>
     @keyframes CommitsRankAnimation {
@@ -369,7 +369,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         width: 0px;
       }
       to {
-        width: 32.266666666666666px;
+        width: 34.13333333333333px;
       }
     }
     #Commits-rank-progress{
@@ -469,21 +469,21 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   
   </svg>
   
-          <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">Experience</text>
-          <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">Experienced Dev</text>
-          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">20pt</text>
+          <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">Issues</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">Hyper Issuer</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">50pt</text>
           
     <style>
-    @keyframes ExperienceRankAnimation {
+    @keyframes IssuesRankAnimation {
       from {
         width: 0px;
       }
       to {
-        width: 16px;
+        width: 0px;
       }
     }
-    #Experience-rank-progress{
-      animation: ExperienceRankAnimation 1s forwards ease-in-out;
+    #Issues-rank-progress{
+      animation: IssuesRankAnimation 1s forwards ease-in-out;
     }
     </style>
     <rect
@@ -496,7 +496,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       fill="#0366d6"
     />
     <rect
-      id="Experience-rank-progress"
+      id="Issues-rank-progress"
       x="15"
       y="101"
       rx="1"
@@ -549,9 +549,18 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 <path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
 </g>
 </svg>
+  <svg x="68" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#B0B0B0" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Courier, Monospace" font-size="7" fill="#505050">A</text>
   
+    </svg>
   <defs>
-    <linearGradient id="A" gradientTransform="rotate(45)">
+    <linearGradient id="AA" gradientTransform="rotate(45)">
     
     <stop offset="0%" stop-color="#B0B0B0"/>
     <stop offset="70%" stop-color="#B0B0B0"/>
@@ -559,7 +568,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     
     </linearGradient>
   </defs>
-  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#A)" xmlns="http://www.w3.org/2000/svg">
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#AA)" xmlns="http://www.w3.org/2000/svg">
     
     <path d="M7 10h2v4H7v-4z"/>
     <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
@@ -570,21 +579,21 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   
   </svg>
   
-          <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">Issues</text>
-          <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">High Issuer</text>
-          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">45pt</text>
+          <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">Experience</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">Experienced Dev</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">20pt</text>
           
     <style>
-    @keyframes IssuesRankAnimation {
+    @keyframes ExperienceRankAnimation {
       from {
         width: 0px;
       }
       to {
-        width: 66.66666666666667px;
+        width: 16px;
       }
     }
-    #Issues-rank-progress{
-      animation: IssuesRankAnimation 1s forwards ease-in-out;
+    #Experience-rank-progress{
+      animation: ExperienceRankAnimation 1s forwards ease-in-out;
     }
     </style>
     <rect
@@ -597,7 +606,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       fill="#0366d6"
     />
     <rect
-      id="Issues-rank-progress"
+      id="Experience-rank-progress"
       x="15"
       y="101"
       rx="1"
@@ -753,7 +762,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   
           <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#000">Stars</text>
           <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#666">Middle Star</text>
-          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">25pt</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">26pt</text>
           
     <style>
     @keyframes StarsRankAnimation {
@@ -761,7 +770,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         width: 0px;
       }
       to {
-        width: 60px;
+        width: 64px;
       }
     }
     #Stars-rank-progress{
