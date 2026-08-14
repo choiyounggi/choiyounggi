@@ -9,22 +9,16 @@
 <h1 align="center">Younggi Choi</h1>
 
 <p align="center">
-  <a href="https://github.com/choiyounggi">
-    <img alt="I build the harness AI codes inside" src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=500&size=20&duration=3200&pause=900&color=22B8CF&center=true&vCenter=true&width=620&height=48&lines=I+build+the+harness+AI+codes+inside;Hooks+%2F+Skills+%2F+MCP+servers+%2F+Memory;Guardrails+before+autonomy">
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/tagline-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/tagline-light.svg">
+    <img alt="I build the harness AI codes inside" width="720" src="./profile/tagline-dark.svg">
+  </picture>
 </p>
 
 <p align="center">
   <strong>The safety and verification layer for agentic coding —<br>
   hooks, skills, and MCP servers that make an AI harness trustworthy enough to run unattended.</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/choiyounggi/linkly/releases"><img alt="linkly release" src="https://img.shields.io/github/v/release/choiyounggi/linkly?style=for-the-badge&label=linkly&labelColor=0D1117&color=22B8CF"></a>
-  &nbsp;
-  <a href="https://github.com/choiyounggi/groundwork/releases"><img alt="groundwork release" src="https://img.shields.io/github/v/release/choiyounggi/groundwork?style=for-the-badge&label=groundwork&labelColor=0D1117&color=22B8CF"></a>
-  &nbsp;
-  <a href="https://github.com/choiyounggi/cliclaw/releases"><img alt="cliclaw release" src="https://img.shields.io/github/v/release/choiyounggi/cliclaw?style=for-the-badge&label=cliclaw&labelColor=0D1117&color=22B8CF"></a>
 </p>
 
 ---
@@ -35,11 +29,13 @@ so it isn't re-derived every session, the MCP servers that hand an agent real co
 guesses, and the memory that survives a `/clear`. An agent is only as good as the environment you
 put it in. **That environment is what I build.** Three projects carry most of that work.
 
-## 1 — linkly · a language designed for an LLM, not a typist
-
-<a href="https://github.com/choiyounggi/linkly"><img alt="linkly" src="https://img.shields.io/github/v/release/choiyounggi/linkly?style=flat-square&label=linkly&labelColor=0D1117&color=22B8CF"></a>
-<img alt="264 tests" src="https://img.shields.io/badge/tests-264%20passing-2A3140?style=flat-square">
-<img alt="8 RFCs" src="https://img.shields.io/badge/RFCs-8%20accepted-2A3140?style=flat-square">
+<a href="https://github.com/choiyounggi/linkly">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-linkly-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-linkly-light.svg">
+    <img alt="linkly — a language designed for an LLM, not a typist" width="100%" src="./profile/card-linkly-dark.svg">
+  </picture>
+</a>
 
 Existing languages were designed to be easy for *humans to write*. From here on, most code is
 generated — so what does a language look like when it's designed to be easy for an **LLM to reason
@@ -55,20 +51,26 @@ compiles through **MLIR to a native binary** — and a differential check confir
 execution order, policy outcome, observability signals, and masking. OpenAPI is generated from the
 IR. Next: a custom `lnpl` MLIR dialect.
 
-## 2 — groundwork · the harness foundation
-
-<a href="https://github.com/choiyounggi/groundwork"><img alt="groundwork" src="https://img.shields.io/github/v/release/choiyounggi/groundwork?style=flat-square&label=groundwork&labelColor=0D1117&color=22B8CF"></a>
-<img alt="MIT" src="https://img.shields.io/github/license/choiyounggi/groundwork?style=flat-square&labelColor=0D1117&color=2A3140">
+<a href="https://github.com/choiyounggi/groundwork">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-groundwork-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-groundwork-light.svg">
+    <img alt="groundwork — the base layer every agent I run sits on" width="100%" src="./profile/card-groundwork-dark.svg">
+  </picture>
+</a>
 
 Guardrail hooks, memory system, skill architecture, audit logging — the base layer every agent I run
 sits on. Written after learning the hard way that a guard regex which matches *everything* is
 indistinguishable from one that matches nothing, so the hooks ship with both-direction regression
 tests: a mention passes, an execution blocks. A guard you haven't tried to fool is decoration.
 
-## 3 — cliclaw · four coding agents, from your phone
-
-<a href="https://github.com/choiyounggi/cliclaw"><img alt="cliclaw" src="https://img.shields.io/github/v/release/choiyounggi/cliclaw?style=flat-square&label=cliclaw&labelColor=0D1117&color=22B8CF"></a>
-<a href="https://www.npmjs.com/package/@younggichoi/cliclaw"><img alt="npm" src="https://img.shields.io/npm/v/%40younggichoi%2Fcliclaw?style=flat-square&label=npm&labelColor=0D1117&color=2A3140"></a>
+<a href="https://github.com/choiyounggi/cliclaw">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-cliclaw-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-cliclaw-light.svg">
+    <img alt="cliclaw — four coding agents, driven from your phone" width="100%" src="./profile/card-cliclaw-dark.svg">
+  </picture>
+</a>
 
 ```bash
 npm install -g @younggichoi/cliclaw
@@ -126,14 +128,6 @@ auto-installed launchd, and corporate-TLS (Zscaler) auto-detection.
     <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=choiyounggi&hide_border=true&theme=github-dark&ring=22B8CF&fire=22B8CF&currStreakLabel=22B8CF">
     <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=choiyounggi&hide_border=true&theme=default&ring=0B7285&fire=0B7285&currStreakLabel=0B7285">
     <img alt="Contribution streak" src="https://streak-stats.demolab.com/?user=choiyounggi&hide_border=true&theme=github-dark&ring=22B8CF&fire=22B8CF&currStreakLabel=22B8CF">
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/trophy-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/trophy-light.svg">
-    <img alt="GitHub trophies" src="./profile/trophy-dark.svg">
   </picture>
 </p>
 

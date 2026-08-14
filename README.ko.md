@@ -9,22 +9,16 @@
 <h1 align="center">최영기 · Younggi Choi</h1>
 
 <p align="center">
-  <a href="https://github.com/choiyounggi">
-    <img alt="I build the harness AI codes inside" src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=500&size=20&duration=3200&pause=900&color=22B8CF&center=true&vCenter=true&width=620&height=48&lines=I+build+the+harness+AI+codes+inside;Hooks+%2F+Skills+%2F+MCP+servers+%2F+Memory;Guardrails+before+autonomy">
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/tagline-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/tagline-light.svg">
+    <img alt="I build the harness AI codes inside" width="720" src="./profile/tagline-dark.svg">
+  </picture>
 </p>
 
 <p align="center">
   <strong>에이전트형 코딩을 위한 안전·검증 레이어 —<br>
   훅, 스킬, MCP 서버로 AI 하네스를 무인 실행해도 될 만큼 신뢰할 수 있게 만듭니다.</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/choiyounggi/linkly/releases"><img alt="linkly release" src="https://img.shields.io/github/v/release/choiyounggi/linkly?style=for-the-badge&label=linkly&labelColor=0D1117&color=22B8CF"></a>
-  &nbsp;
-  <a href="https://github.com/choiyounggi/groundwork/releases"><img alt="groundwork release" src="https://img.shields.io/github/v/release/choiyounggi/groundwork?style=for-the-badge&label=groundwork&labelColor=0D1117&color=22B8CF"></a>
-  &nbsp;
-  <a href="https://github.com/choiyounggi/cliclaw/releases"><img alt="cliclaw release" src="https://img.shields.io/github/v/release/choiyounggi/cliclaw?style=for-the-badge&label=cliclaw&labelColor=0D1117&color=22B8CF"></a>
 </p>
 
 ---
@@ -35,11 +29,13 @@ AI 코딩 노력의 대부분은 프롬프트에 들어갑니다. 하지만 진�
 `/clear` 이후에도 살아남는 메모리. **에이전트는 자신이 놓인 환경만큼만 우수합니다. 그 환경을 만드는 것이
 제 일입니다.** 세 개의 프로젝트가 그 작업의 대부분을 담당합니다.
 
-## 1 — linkly · 타이피스트가 아니라 LLM을 위해 설계된 언어
-
-<a href="https://github.com/choiyounggi/linkly"><img alt="linkly" src="https://img.shields.io/github/v/release/choiyounggi/linkly?style=flat-square&label=linkly&labelColor=0D1117&color=22B8CF"></a>
-<img alt="264 tests" src="https://img.shields.io/badge/tests-264%20passing-2A3140?style=flat-square">
-<img alt="8 RFCs" src="https://img.shields.io/badge/RFCs-8%20accepted-2A3140?style=flat-square">
+<a href="https://github.com/choiyounggi/linkly">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-linkly-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-linkly-light.svg">
+    <img alt="linkly — 타이피스트가 아니라 LLM을 위해 설계된 언어" width="100%" src="./profile/card-linkly-dark.svg">
+  </picture>
+</a>
 
 기존 언어들은 *사람이 쓰기* 쉽도록 설계됐습니다. 앞으로 대부분의 코드는 생성됩니다 — 그렇다면
 **LLM이 추론하고 최적화하기** 쉽도록 설계된 언어는 어떤 모습일까요?
@@ -53,20 +49,26 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
 바이너리로 컴파일**됩니다 — 그리고 차분(differential) 검사가 두 실행 모드가 실행 순서·정책 결과·관측
 신호·마스킹에서 일치하는지 확인합니다. OpenAPI는 IR에서 생성됩니다. 다음: 커스텀 `lnpl` MLIR 방언.
 
-## 2 — groundwork · 하네스의 기반
-
-<a href="https://github.com/choiyounggi/groundwork"><img alt="groundwork" src="https://img.shields.io/github/v/release/choiyounggi/groundwork?style=flat-square&label=groundwork&labelColor=0D1117&color=22B8CF"></a>
-<img alt="MIT" src="https://img.shields.io/github/license/choiyounggi/groundwork?style=flat-square&labelColor=0D1117&color=2A3140">
+<a href="https://github.com/choiyounggi/groundwork">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-groundwork-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-groundwork-light.svg">
+    <img alt="groundwork — 제가 돌리는 모든 에이전트가 올라서는 베이스 레이어" width="100%" src="./profile/card-groundwork-dark.svg">
+  </picture>
+</a>
 
 가드레일 훅, 메모리 시스템, 스킬 아키텍처, 감사 로깅 — 제가 돌리는 모든 에이전트가 올라서는 베이스
 레이어. *모든 것*에 매칭되는 가드 정규식은 아무것도 매칭하지 않는 것과 구분되지 않는다는 걸 어렵게
 배운 뒤에 작성했습니다. 그래서 훅들은 양방향 회귀 테스트를 함께 배포합니다: 언급은 통과하고, 실행은
 차단됩니다. 속여보려 시도해 본 적 없는 가드는 장식일 뿐입니다.
 
-## 3 — cliclaw · 네 개의 코딩 에이전트를, 당신의 폰에서
-
-<a href="https://github.com/choiyounggi/cliclaw"><img alt="cliclaw" src="https://img.shields.io/github/v/release/choiyounggi/cliclaw?style=flat-square&label=cliclaw&labelColor=0D1117&color=22B8CF"></a>
-<a href="https://www.npmjs.com/package/@younggichoi/cliclaw"><img alt="npm" src="https://img.shields.io/npm/v/%40younggichoi%2Fcliclaw?style=flat-square&label=npm&labelColor=0D1117&color=2A3140"></a>
+<a href="https://github.com/choiyounggi/cliclaw">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-cliclaw-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-cliclaw-light.svg">
+    <img alt="cliclaw — 네 개의 코딩 에이전트를, 당신의 폰에서" width="100%" src="./profile/card-cliclaw-dark.svg">
+  </picture>
+</a>
 
 ```bash
 npm install -g @younggichoi/cliclaw
@@ -124,14 +126,6 @@ TLS(Zscaler) 자동 감지.
     <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=choiyounggi&hide_border=true&theme=github-dark&ring=22B8CF&fire=22B8CF&currStreakLabel=22B8CF">
     <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=choiyounggi&hide_border=true&theme=default&ring=0B7285&fire=0B7285&currStreakLabel=0B7285">
     <img alt="Contribution streak" src="https://streak-stats.demolab.com/?user=choiyounggi&hide_border=true&theme=github-dark&ring=22B8CF&fire=22B8CF&currStreakLabel=22B8CF">
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/trophy-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/trophy-light.svg">
-    <img alt="GitHub trophies" src="./profile/trophy-dark.svg">
   </picture>
 </p>
 
