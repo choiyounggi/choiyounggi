@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 48" width="720" height="48" role="img" aria-label="AI가 코드를 짜는 하네스를 만듭니다">
+<!-- Hallmark · component: tagline · theme: studied-DNA (source: url awesome-github-profile-readme) · self-hosted, replaces readme-typing-svg -->
+<style>
+  .l { font: 500 20px 'JetBrains Mono','SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; fill: #0B7285; opacity: 0; animation: cycle 13.5s infinite; }
+  @keyframes cycle {
+    0% { opacity: 0; } 3.5% { opacity: 1; } 29.5% { opacity: 1; } 33% { opacity: 0; } 100% { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .l { animation: none; }
+    .l0 { opacity: 1; }
+  }
+</style>
+  <text class="l l0" x="360" y="30" text-anchor="middle" style="animation-delay:0s">AI가 코드를 짜는 하네스를 만듭니다</text>
+  <text class="l l1" x="360" y="30" text-anchor="middle" style="animation-delay:4.5s">훅 · 스킬 · MCP 서버 · 메모리</text>
+  <text class="l l2" x="360" y="30" text-anchor="middle" style="animation-delay:9s">자율성보다 가드레일 먼저</text>
+</svg>

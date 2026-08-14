@@ -10,9 +10,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/tagline-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/tagline-light.svg">
-    <img alt="I build the harness AI codes inside" width="720" src="./profile/tagline-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/tagline-ko-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/tagline-ko-light.svg">
+    <img alt="AI가 코드를 짜는 하네스를 만듭니다" width="720" src="./profile/tagline-ko-dark.svg">
   </picture>
 </p>
 
@@ -31,9 +31,9 @@ AI 코딩 노력의 대부분은 프롬프트에 들어갑니다. 하지만 진�
 
 <a href="https://github.com/choiyounggi/linkly">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-linkly-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/card-linkly-light.svg">
-    <img alt="linkly — 타이피스트가 아니라 LLM을 위해 설계된 언어" width="100%" src="./profile/card-linkly-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-linkly-ko-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-linkly-ko-light.svg">
+    <img alt="linkly — 타이피스트가 아니라 LLM을 위해 설계된 언어" width="100%" src="./profile/card-linkly-ko-dark.svg">
   </picture>
 </a>
 
@@ -51,9 +51,9 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
 
 <a href="https://github.com/choiyounggi/groundwork">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-groundwork-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/card-groundwork-light.svg">
-    <img alt="groundwork — 제가 돌리는 모든 에이전트가 올라서는 베이스 레이어" width="100%" src="./profile/card-groundwork-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-groundwork-ko-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-groundwork-ko-light.svg">
+    <img alt="groundwork — 제가 돌리는 모든 에이전트가 올라서는 베이스 레이어" width="100%" src="./profile/card-groundwork-ko-dark.svg">
   </picture>
 </a>
 
@@ -64,9 +64,9 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
 
 <a href="https://github.com/choiyounggi/cliclaw">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-cliclaw-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/card-cliclaw-light.svg">
-    <img alt="cliclaw — 네 개의 코딩 에이전트를, 당신의 폰에서" width="100%" src="./profile/card-cliclaw-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/card-cliclaw-ko-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/card-cliclaw-ko-light.svg">
+    <img alt="cliclaw — 네 개의 코딩 에이전트를, 당신의 폰에서" width="100%" src="./profile/card-cliclaw-ko-dark.svg">
   </picture>
 </a>
 
