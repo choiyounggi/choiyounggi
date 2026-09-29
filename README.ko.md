@@ -57,8 +57,21 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
   </picture>
 </a>
 
-가드레일 훅, 메모리 시스템, 스킬 아키텍처, 감사 로깅 — 제가 돌리는 모든 에이전트가 올라서는 베이스
-레이어. *모든 것*에 매칭되는 가드 정규식은 아무것도 매칭하지 않는 것과 구분되지 않는다는 걸 어렵게
+플러그인 네 개로 이루어진 Claude Code 마켓플레이스 — 제가 돌리는 모든 에이전트가 올라서는 베이스
+레이어:
+
+- **guardrails** — `curl | sh`는 차단하고 `rm -rf`, force-push, `DROP` 앞에서는 물어보는 로컬
+  Bash 가드. `--dangerously-skip-permissions` 모드에서도 버팁니다.
+- **dev-loop** — 위키에 근거한 계획 → TDD → 검증 루프, 그리고 **Orca 네이티브**로 도는(추적되는
+  태스크, 이벤트 기반 `worker_done` / `escalation` 메일, 진짜 생존 감지) 멀티 세션
+  오케스트레이터. Orca가 없으면 tmux로 폴백.
+- **memory-loop** — 환각 메모리를 막는 저장 게이트, 계층형 만료, 그리고 토큰을 예산으로 다루는
+  항상 로드되는 규칙 파일 두 개: **HABITS.md**(8000바이트 / 24개, 쓰는 시점에 강제)와
+  **OUTPUT.md**(ELI5처럼 쉽게, 결론 먼저, 증거는 절대 자르지 않기).
+- **jev-gate** — TypeSafe의 **Jev** 방식 로컬 판단 모델: 확률이 붙은 타입 답, 토큰 0, 약 0.75초.
+  회색 지대 셸 명령을 거르고, 증거 없는 "완료" 주장을 되돌립니다. 판단만 하고 결정은 하지 않습니다.
+
+*모든 것*에 매칭되는 가드 정규식은 아무것도 매칭하지 않는 것과 구분되지 않는다는 걸 어렵게
 배운 뒤에 작성했습니다. 그래서 훅들은 양방향 회귀 테스트를 함께 배포합니다: 언급은 통과하고, 실행은
 차단됩니다. 속여보려 시도해 본 적 없는 가드는 장식일 뿐입니다.
 
@@ -85,7 +98,8 @@ TLS(Zscaler) 자동 감지.
 | | |
 | --- | --- |
 | **[claude-secretmode](https://github.com/choiyounggi/claude-secretmode)** | 흔적을 남기지 않는 Claude Code 세션 — RAM 디스크에서 실행되어 트랜스크립트·프롬프트 기록·파일 스냅샷이 디스크에 닿지 않으면서도, 키체인 인증·MCP 서버·훅·스킬은 그대로 상속합니다. `npm i -g @younggichoi/claude-secretmode` |
-| **[dev-loop](https://github.com/choiyounggi/dev-loop)** | 코딩 에이전트를 위한 지식 관리 — 위키 기반 검증, RFC 기반 문서, 그리고 매번 재학습되는 대신 다음 작업으로 이어지는 베스트 프랙티스 캡처. |
+| **[dev-loop](https://github.com/choiyounggi/dev-loop)** | 코딩 에이전트를 위한 지식 관리 — 위키 기반 검증, RFC 기반 문서, 매번 재학습되는 대신 다음 작업으로 이어지는 베스트 프랙티스 캡처, 그리고 의존 그래프 스케줄러를 가진 Orca 네이티브 멀티 세션 오케스트레이터. |
+| **[jev-gate](https://github.com/choiyounggi/jev-gate)** | Claude Code 보조자로서의 로컬 Jev 호환 판단 모델 — Bash 위험도 게이트, 정지 증거 게이트, `decide` MCP 도구, 측정된 평가 하네스(50건: 위험 명령 놓침 0건). 결정자는 아닙니다. |
 | **[loop-orchestrator](https://github.com/choiyounggi/loop-orchestrator)** | 멀티 에이전트 오케스트레이션 — 병렬 실행, TDD/PDCA/Reflexion 루프, 테스트 품질 감사, 머지 게이트 검증. |
 | **[dev-llm-wiki](https://github.com/choiyounggi/dev-llm-wiki)** | 케이스 라우팅되는 엔지니어링 지식 — 사람이 읽기 위해서가 아니라, 에이전트가 최소 작업 컨텍스트로 로드하도록 작성됨. 한 페이지에 한 케이스, 도메인으로 라우팅. |
 | **[awesome-claude-plugins](https://github.com/choiyounggi/awesome-claude-plugins)** | Claude Code를 커맨드·에이전트·훅·MCP 서버로 확장하는 플러그인 모음. |
