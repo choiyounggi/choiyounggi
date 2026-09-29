@@ -11,6 +11,6 @@
   }
 </style>
   <text class="l l0" x="360" y="30" text-anchor="middle" style="animation-delay:0s">AI가 코드를 짜는 하네스를 만듭니다</text>
-  <text class="l l1" x="360" y="30" text-anchor="middle" style="animation-delay:4.5s">훅 · 스킬 · MCP 서버 · 메모리</text>
-  <text class="l l2" x="360" y="30" text-anchor="middle" style="animation-delay:9s">자율성보다 가드레일 먼저</text>
+  <text class="l l1" x="360" y="30" text-anchor="middle" style="animation-delay:4.5s">가드레일 · 검증 · 메모리 · 판단</text>
+  <text class="l l2" x="360" y="30" text-anchor="middle" style="animation-delay:9s">토큰은 적게, 증거는 남기고</text>
 </svg>

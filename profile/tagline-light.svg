@@ -11,6 +11,6 @@
   }
 </style>
   <text class="l l0" x="360" y="30" text-anchor="middle" style="animation-delay:0s">I build the harness AI codes inside</text>
-  <text class="l l1" x="360" y="30" text-anchor="middle" style="animation-delay:4.5s">Hooks · Skills · MCP servers · Memory</text>
-  <text class="l l2" x="360" y="30" text-anchor="middle" style="animation-delay:9s">Guardrails before autonomy</text>
+  <text class="l l1" x="360" y="30" text-anchor="middle" style="animation-delay:4.5s">Guardrails · Verification · Memory · Judgment</text>
+  <text class="l l2" x="360" y="30" text-anchor="middle" style="animation-delay:9s">Fewer tokens, more proof</text>
 </svg>
