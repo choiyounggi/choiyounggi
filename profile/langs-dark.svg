@@ -124,7 +124,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="125.58"
+          width="125.55"
           height="8"
           fill="#3572A5"
         />
@@ -132,9 +132,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="125.58"
+          x="125.55"
           y="0"
-          width="52.69"
+          width="52.67"
           height="8"
           fill="#3178c6"
         />
@@ -142,9 +142,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="178.26999999999998"
+          x="178.22"
           y="0"
-          width="30.4"
+          width="30.39"
           height="8"
           fill="#dea584"
         />
@@ -152,9 +152,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="208.67"
+          x="208.61"
           y="0"
-          width="29.3"
+          width="29.35"
           height="8"
           fill="#89e051"
         />
@@ -162,9 +162,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="237.97"
+          x="237.96"
           y="0"
-          width="17.19"
+          width="17.18"
           height="8"
           fill="#F05138"
         />
@@ -172,7 +172,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="245.16"
+          x="245.14000000000001"
           y="0"
           width="14.85"
           height="8"
@@ -185,7 +185,7 @@
     <g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#3572A5" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Python 50.23%
+        Python 50.22%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
@@ -206,7 +206,7 @@
     <g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#89e051" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Shell 11.72%
+        Shell 11.74%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
