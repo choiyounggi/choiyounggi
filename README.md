@@ -74,8 +74,8 @@ A Claude Code marketplace of four plugins — the base layer every agent I run s
   that cite no evidence. It judges; it never decides.
 - **session-progress** — a Claude Code **mod**: TypeScript hooks the engine runs in-process, drawing
   their own pane. The current request's plan bar, every task with its steps and subagents, a
-  dev-loop run's workers moving through phases and gates, and a Context Dragon that grows with the
-  context window — so you compact before it fills, not after.
+  dev-loop run's workers with their phases and gates, and a Context Dragon that grows as the context
+  window fills — so you compact before it is full, not after.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/choiyounggi/groundwork/v0.3.1/plugins/session-progress/assets/screenshot-en.png" alt="session-progress in a live session: plan bar, a dev-loop run with four workers, task history, and the Context Dragon" width="480">

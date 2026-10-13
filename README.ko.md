@@ -72,7 +72,7 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
   회색 지대 셸 명령을 거르고, 증거 없는 "완료" 주장을 되돌립니다. 판단만 하고 결정은 하지 않습니다.
 - **session-progress** — Claude Code **mod**: 엔진이 프로세스 안에서 직접 부르는 TypeScript 훅이
   자기 pane 을 그립니다. 지금 요청의 계획 진행 바, 단계와 서브에이전트까지 담은 작업 이력,
-  단계와 게이트를 지나가는 dev-loop 워커들, 그리고 컨텍스트 창과 함께 자라는 컨텍스트 드래곤 —
+  dev-loop 워커들의 단계와 게이트, 그리고 컨텍스트 창이 찰수록 자라는 컨텍스트 드래곤 —
   컨텍스트가 다 차기 전에 압축하게 해 줍니다.
 
 <p align="center">
