@@ -59,7 +59,7 @@ IR. Next: a custom `lnpl` MLIR dialect.
   </picture>
 </a>
 
-A Claude Code marketplace of four plugins — the base layer every agent I run sits on:
+A Claude Code marketplace of four plugins — the base layer every agent I run sits on — and a mod to watch it work:
 
 - **guardrails** — a local Bash guard that blocks `curl | sh` and asks before `rm -rf`, force-push
   and `DROP`, and still holds in `--dangerously-skip-permissions` mode.
@@ -72,6 +72,15 @@ A Claude Code marketplace of four plugins — the base layer every agent I run s
 - **jev-gate** — a local decision model in the style of TypeSafe's **Jev**: typed answers with
   probabilities, zero tokens, ~0.75 s. It gates grey-zone shell commands and bounces "done" claims
   that cite no evidence. It judges; it never decides.
+- **session-progress** — a Claude Code **mod**: TypeScript hooks the engine runs in-process, drawing
+  their own pane. The current request's plan bar, every task with its steps and subagents, a
+  dev-loop run's workers moving through phases and gates, and a Context Dragon that grows with the
+  context window — so you compact before it fills, not after.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/choiyounggi/groundwork/v0.3.1/plugins/session-progress/assets/screenshot-en.png" alt="session-progress in a live session: plan bar, a dev-loop run with four workers, task history, and the Context Dragon" width="480">
+  <img src="https://raw.githubusercontent.com/choiyounggi/groundwork/v0.3.1/plugins/session-progress/assets/dragon-stages-en.png" alt="The seven stages of the Context Dragon" width="480">
+</p>
 
 Written after learning the hard way that a guard regex which matches *everything* is
 indistinguishable from one that matches nothing, so the hooks ship with both-direction regression
@@ -100,7 +109,7 @@ auto-installed launchd, and corporate-TLS (Zscaler) auto-detection.
 | | |
 | --- | --- |
 | **[claude-secretmode](https://github.com/choiyounggi/claude-secretmode)** | Leave-no-trace Claude Code sessions — runs on a RAM disk so transcripts, prompt history, and file snapshots never touch disk, while still inheriting keychain auth, MCP servers, hooks, and skills. `npm i -g @younggichoi/claude-secretmode` |
-| **[dev-loop](https://github.com/choiyounggi/dev-loop)** | Knowledge management for coding agents — wiki-grounded verification, RFC-based docs, best-practice capture that feeds the next task instead of being relearned, and an Orca-native multi-session orchestrator with a dependency-graph scheduler. |
+| **[dev-loop](https://github.com/choiyounggi/dev-loop)** | Knowledge management for coding agents — wiki-grounded verification, RFC-based docs, best-practice capture that feeds the next task instead of being relearned, and an Orca-native multi-session orchestrator with a dependency-graph scheduler, whose runs you can watch live in the session-progress mod. |
 | **[jev-gate](https://github.com/choiyounggi/jev-gate)** | A local Jev-compatible decision model as a Claude Code assistant — Bash risk gate, Stop evidence gate, `decide` MCP tool, and a measured eval harness (50 cases: 0 dangerous commands missed). Never the decider. |
 | **[loop-orchestrator](https://github.com/choiyounggi/loop-orchestrator)** | Multi-agent orchestration — parallel execution, TDD/PDCA/Reflexion loops, test-quality audit, merge-gate verification. |
 | **[dev-llm-wiki](https://github.com/choiyounggi/dev-llm-wiki)** | Case-routed engineering knowledge written to be loaded as minimal working context by an agent, not read by a human. One case per page, routed by domain. |

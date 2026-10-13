@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 132" width="900" height="132" role="img" aria-label="groundwork — The base layer every agent I run sits on — guardrails · dev-loop · memory-loop · jev-gate">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 132" width="900" height="132" role="img" aria-label="groundwork — The base layer every agent I run sits on — guardrails · dev-loop · memory-loop · jev-gate · session-progress">
 <rect x="0.5" y="0.5" width="899" height="131" rx="10" fill="#FFFFFF" stroke="#D0D7DE"/>
 <circle cx="36" cy="31" r="4" fill="#0B7285"/>
 <text x="48" y="35" style="font:500 12px 'JetBrains Mono','SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" fill="#6E7781">choiyounggi<tspan fill="#D0D7DE"> / </tspan><tspan fill="#0B7285" font-weight="700">groundwork</tspan></text>
 <text x="868" y="35" text-anchor="end" style="font:500 12px 'JetBrains Mono','SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" fill="#6E7781">github ↗</text>
 <text x="32" y="68" style="font:700 22px 'JetBrains Mono','SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" fill="#1F2328">The base layer every agent I run sits on</text>
-<text x="32" y="92" style="font:400 14px -apple-system,BlinkMacSystemFont,'Segoe UI','Apple SD Gothic Neo','Malgun Gothic',Helvetica,Arial,sans-serif" fill="#57606A">guardrails · dev-loop · memory-loop · jev-gate</text>
+<text x="32" y="92" style="font:400 14px -apple-system,BlinkMacSystemFont,'Segoe UI','Apple SD Gothic Neo','Malgun Gothic',Helvetica,Arial,sans-serif" fill="#57606A">guardrails · dev-loop · memory-loop · jev-gate · session-progress</text>
 <line x1="32" y1="105" x2="868" y2="105" stroke="#E6EAEF"/>
-<text x="32" y="122" style="font:500 12px 'JetBrains Mono','SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" fill="#424A53"><tspan>4 plugins</tspan><tspan fill="#6E7781" opacity="0.55">  ·  </tspan><tspan>hooks</tspan><tspan fill="#6E7781" opacity="0.55">  ·  </tspan><tspan>Orca-native</tspan><tspan fill="#6E7781" opacity="0.55">  ·  </tspan><tspan>MIT</tspan></text>
+<text x="32" y="122" style="font:500 12px 'JetBrains Mono','SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" fill="#424A53"><tspan>4 plugins + a mod</tspan><tspan fill="#6E7781" opacity="0.55">  ·  </tspan><tspan>hooks</tspan><tspan fill="#6E7781" opacity="0.55">  ·  </tspan><tspan>Orca-native</tspan><tspan fill="#6E7781" opacity="0.55">  ·  </tspan><tspan>MIT</tspan></text>
 </svg>
