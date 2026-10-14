@@ -58,7 +58,7 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
 </a>
 
 플러그인 네 개로 이루어진 Claude Code 마켓플레이스 — 제가 돌리는 모든 에이전트가 올라서는 베이스
-레이어:
+레이어 — 와, 그게 일하는 모습을 보여 주는 mod 하나:
 
 - **guardrails** — `curl | sh`는 차단하고 `rm -rf`, force-push, `DROP` 앞에서는 물어보는 로컬
   Bash 가드. `--dangerously-skip-permissions` 모드에서도 버팁니다.
@@ -70,6 +70,15 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
   **OUTPUT.md**(ELI5처럼 쉽게, 결론 먼저, 증거는 절대 자르지 않기).
 - **jev-gate** — TypeSafe의 **Jev** 방식 로컬 판단 모델: 확률이 붙은 타입 답, 토큰 0, 약 0.75초.
   회색 지대 셸 명령을 거르고, 증거 없는 "완료" 주장을 되돌립니다. 판단만 하고 결정은 하지 않습니다.
+- **session-progress** — Claude Code **mod**: 엔진이 프로세스 안에서 직접 부르는 TypeScript 훅이
+  자기 pane 을 그립니다. 지금 요청의 계획 진행 바, 단계와 서브에이전트까지 담은 작업 이력,
+  dev-loop 워커들의 단계와 게이트, 그리고 컨텍스트 창이 찰수록 자라는 컨텍스트 드래곤 —
+  컨텍스트가 다 차기 전에 압축하게 해 줍니다.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/choiyounggi/groundwork/v0.3.1/plugins/session-progress/assets/screenshot-ko.png" alt="실제 세션의 session-progress: 계획 진행 바, 워커 4개의 dev-loop 실행, 작업 이력, 컨텍스트 드래곤" width="480">
+  <img src="https://raw.githubusercontent.com/choiyounggi/groundwork/v0.3.1/plugins/session-progress/assets/dragon-stages-ko.png" alt="컨텍스트 드래곤 7단계" width="480">
+</p>
 
 *모든 것*에 매칭되는 가드 정규식은 아무것도 매칭하지 않는 것과 구분되지 않는다는 걸 어렵게
 배운 뒤에 작성했습니다. 그래서 훅들은 양방향 회귀 테스트를 함께 배포합니다: 언급은 통과하고, 실행은
@@ -98,7 +107,7 @@ TLS(Zscaler) 자동 감지.
 | | |
 | --- | --- |
 | **[claude-secretmode](https://github.com/choiyounggi/claude-secretmode)** | 흔적을 남기지 않는 Claude Code 세션 — RAM 디스크에서 실행되어 트랜스크립트·프롬프트 기록·파일 스냅샷이 디스크에 닿지 않으면서도, 키체인 인증·MCP 서버·훅·스킬은 그대로 상속합니다. `npm i -g @younggichoi/claude-secretmode` |
-| **[dev-loop](https://github.com/choiyounggi/dev-loop)** | 코딩 에이전트를 위한 지식 관리 — 위키 기반 검증, RFC 기반 문서, 매번 재학습되는 대신 다음 작업으로 이어지는 베스트 프랙티스 캡처, 그리고 의존 그래프 스케줄러를 가진 Orca 네이티브 멀티 세션 오케스트레이터. |
+| **[dev-loop](https://github.com/choiyounggi/dev-loop)** | 코딩 에이전트를 위한 지식 관리 — 위키 기반 검증, RFC 기반 문서, 매번 재학습되는 대신 다음 작업으로 이어지는 베스트 프랙티스 캡처, 그리고 의존 그래프 스케줄러를 가진 Orca 네이티브 멀티 세션 오케스트레이터. 실행 상황은 session-progress mod 로 실시간으로 볼 수 있습니다. |
 | **[jev-gate](https://github.com/choiyounggi/jev-gate)** | Claude Code 보조자로서의 로컬 Jev 호환 판단 모델 — Bash 위험도 게이트, 정지 증거 게이트, `decide` MCP 도구, 측정된 평가 하네스(50건: 위험 명령 놓침 0건). 결정자는 아닙니다. |
 | **[loop-orchestrator](https://github.com/choiyounggi/loop-orchestrator)** | 멀티 에이전트 오케스트레이션 — 병렬 실행, TDD/PDCA/Reflexion 루프, 테스트 품질 감사, 머지 게이트 검증. |
 | **[dev-llm-wiki](https://github.com/choiyounggi/dev-llm-wiki)** | 케이스 라우팅되는 엔지니어링 지식 — 사람이 읽기 위해서가 아니라, 에이전트가 최소 작업 컨텍스트로 로드하도록 작성됨. 한 페이지에 한 케이스, 도메인으로 라우팅. |
