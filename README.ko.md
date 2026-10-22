@@ -58,7 +58,7 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
 </a>
 
 플러그인 네 개로 이루어진 Claude Code 마켓플레이스 — 제가 돌리는 모든 에이전트가 올라서는 베이스
-레이어 — 와, 그게 일하는 모습을 보여 주는 mod 하나:
+레이어 — 와, 에이전트가 남긴 파일을 정리하는 플러그인 하나, 그게 일하는 모습을 보여 주는 mod 하나:
 
 - **guardrails** — `curl | sh`는 차단하고 `rm -rf`, force-push, `DROP` 앞에서는 물어보는 로컬
   Bash 가드. `--dangerously-skip-permissions` 모드에서도 버팁니다.
@@ -70,6 +70,11 @@ Developer → Intent (무엇을) → LLM → Semantic IR → Native Optimizer �
   **OUTPUT.md**(ELI5처럼 쉽게, 결론 먼저, 증거는 절대 자르지 않기).
 - **jev-gate** — TypeSafe의 **Jev** 방식 로컬 판단 모델: 확률이 붙은 타입 답, 토큰 0, 약 0.75초.
   회색 지대 셸 명령을 거르고, 증거 없는 "완료" 주장을 되돌립니다. 판단만 하고 결정은 하지 않습니다.
+- **file-lifecycle** — 에이전트가 만드는 모든 파일에 두 가지 수명 중 하나를 줍니다. 임시 파일은
+  세션마다 생기는 폴더(`$CLAUDE_SESSION_TMP`)에 두고 세션이 끝나고 24시간 뒤 지웁니다. 남길 파일은
+  날짜가 붙은 아카이브로 옮기는데, 시크릿 검사는 확인 못 하면 거부하고, 같은 내용은 중복으로
+  거부하며, 에이전트가 새 파일을 만들기 전에 읽는 `INDEX.md`를 만들어 둡니다. 정리기는 git 저장소와
+  사용 중인 파일은 절대 지우지 않습니다.
 - **session-progress** — Claude Code **mod**: 엔진이 프로세스 안에서 직접 부르는 TypeScript 훅이
   자기 pane 을 그립니다. 지금 요청의 계획 진행 바, 단계와 서브에이전트까지 담은 작업 이력,
   dev-loop 워커들의 단계와 게이트, 그리고 컨텍스트 창이 찰수록 자라는 컨텍스트 드래곤 —

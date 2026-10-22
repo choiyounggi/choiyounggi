@@ -22,8 +22,8 @@ const PROJECTS = [
   },
   {
     name: 'groundwork',
-    en: { tagline: 'The base layer every agent I run sits on', sub: 'guardrails · dev-loop · memory-loop · jev-gate · session-progress', tags: ['4 plugins + a mod', 'hooks', 'Orca-native', 'MIT'] },
-    ko: { tagline: '제가 돌리는 모든 에이전트가 올라서는 베이스 레이어', sub: 'guardrails · dev-loop · memory-loop · jev-gate · session-progress', tags: ['플러그인 4개 + mod', '훅', 'Orca 네이티브', 'MIT'] },
+    en: { tagline: 'The base layer every agent I run sits on', sub: 'guardrails · dev-loop · memory-loop · jev-gate · session-progress · file-lifecycle', tags: ['4 plugins + 2 companions', 'hooks', 'Orca-native', 'MIT'] },
+    ko: { tagline: '제가 돌리는 모든 에이전트가 올라서는 베이스 레이어', sub: 'guardrails · dev-loop · memory-loop · jev-gate · session-progress · file-lifecycle', tags: ['플러그인 4개 + 보조 2개', '훅', 'Orca 네이티브', 'MIT'] },
   },
   {
     name: 'cliclaw',

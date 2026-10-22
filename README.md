@@ -59,7 +59,8 @@ IR. Next: a custom `lnpl` MLIR dialect.
   </picture>
 </a>
 
-A Claude Code marketplace of four plugins — the base layer every agent I run sits on — and a mod to watch it work:
+A Claude Code marketplace of four plugins — the base layer every agent I run sits on — plus a plugin that
+cleans up after the agent and a mod to watch it work:
 
 - **guardrails** — a local Bash guard that blocks `curl | sh` and asks before `rm -rf`, force-push
   and `DROP`, and still holds in `--dangerously-skip-permissions` mode.
@@ -72,6 +73,10 @@ A Claude Code marketplace of four plugins — the base layer every agent I run s
 - **jev-gate** — a local decision model in the style of TypeSafe's **Jev**: typed answers with
   probabilities, zero tokens, ~0.75 s. It gates grey-zone shell commands and bounces "done" claims
   that cite no evidence. It judges; it never decides.
+- **file-lifecycle** — every file an agent makes gets one of two lives. Scratch goes to a per-session
+  dir (`$CLAUDE_SESSION_TMP`) deleted 24 h after the session ends; files worth keeping go into a
+  dated archive with a fail-closed secret scan, duplicate refusal, and an `INDEX.md` the agent reads
+  before it makes a new one. The sweeper never deletes a git repo or a file still in use.
 - **session-progress** — a Claude Code **mod**: TypeScript hooks the engine runs in-process, drawing
   their own pane. The current request's plan bar, every task with its steps and subagents, a
   dev-loop run's workers with their phases and gates, and a Context Dragon that grows as the context
