@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Younggi Choi&#39;s GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Commits  : 1635, Total PRs: 515, Contributed to (last year): 4</desc>
+        <desc id="descId">Total Commits  : 1639, Total PRs: 515, Contributed to (last year): 4</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 88.64027636954076;
+        stroke-dashoffset: 88.60284545838674;
       }
     }
   
